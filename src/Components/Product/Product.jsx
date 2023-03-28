@@ -1,11 +1,12 @@
 import React from 'react';
 import './Product.css';
+import cart from '../images/Cart.svg'
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:ital@1&family=Lato&family=Montserrat:ital,wght@1,300&display=swap');
 </style>
 const Product = (props) => {
     const {category,id,img,quantity,price,ratings,seller,name}= props.product;
-    console.log(props.product)
+    const handleAddToCart = props.handleAddToCart;
     return (
        
         <div className='product'>
@@ -16,7 +17,8 @@ const Product = (props) => {
          <p>Manufacturer : {seller}</p>
          <p>Rating : {ratings}</p>
           </div>
-          <button className='product-btn'>Add to cart</button>
+          <button onClick={() =>handleAddToCart(props.product)} className='product-btn'>Add to cart{cart}
+          </button>
         </div>
         
         
