@@ -1,0 +1,17 @@
+.header{
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+ .header a {
+    text-decoration: none;
+color: white;
+padding: 0 18px;
+ }
+
+ div.header a :hover{
+color: coral;
+ }
